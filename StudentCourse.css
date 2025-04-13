@@ -1,0 +1,93 @@
+body {
+  font-family: 'Georgia', serif;  /* Ensure uniform font style */
+  background-color: #f8f9fa;  /* Light gray background */
+  color: #333;  /* Dark text for good readability */
+  background: url('mainb.jpg') no-repeat center center fixed;  /* Background image */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  width: 250px;
+  background-color: #343a40;  /* Dark sidebar to match Student Course Tab */
+  color: white;
+  transition: left 0.3s ease;
+  padding-top: 20px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .nav-link {
+  color: white;
+  text-transform: uppercase;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #495057;  /* Sidebar link hover effect */
+}
+
+.content {
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+  padding: 20px;
+}
+
+.content.open {
+  margin-left: 250px;
+}
+
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  color: #343a40;  /* Match the hamburger menu color */
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  /* Soft shadow for cards */
+}
+
+.card-header {
+  background-color: #007bff;  /* Blue header, uniform with the Student Course page */
+  color: white;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.total-users {
+  font-size: 48px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.navbar {
+  background-color: #093058;  /* Dark blue navbar */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .sidebar {
+      left: -100%;
+      width: 100%;
+  }
+
+  .sidebar.open {
+      left: 0;
+  }
+
+  .content.open {
+      margin-left: 0;
+  }
+}
